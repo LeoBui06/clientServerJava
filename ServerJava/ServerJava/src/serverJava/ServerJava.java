@@ -5,7 +5,7 @@ import java.net.*;
 public class ServerJava {
 
 	public static void main(String[] args) {
-int port = 12345; // La stessa porta usata dal client
+int port = 31114; // La stessa porta usata dal client
         
         try {
             // Crea un server socket

@@ -6,8 +6,8 @@ public class Client {
 
 	public static void main(String[] args) {
 	        // Indirizzo del server e la porta su cui ascolta il server
-	        String serverAddress = "127.0.0.1"; // IP del server
-	        int port = 12345; // Porta del server
+	        String serverAddress = "10.130.1.114"; // IP del server
+	        int port = 31114; // Porta del server
 	        
 	        try {
 	            // Crea un socket per connettersi al server
