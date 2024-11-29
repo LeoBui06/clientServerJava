@@ -26,23 +26,34 @@ public class ServerJava {
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
             PrintWriter writer = new PrintWriter(outputStream, true);
             
-            
-            
-            
-            // Legge il messaggio inviato dal client
-            String clientMessage = reader.readLine();
-            System.out.println("Messaggio ricevuto dal client: " + clientMessage);
-            
-            
-            clientMessage = clientMessage.toUpperCase(  );
+            String clientMessage;
 
-            //System.out.println("Messaggio in upper case: " + clientMessage);
+                
+            while(true)
+            {
+            	   
+                // Legge il messaggio inviato dal client
+                clientMessage = reader.readLine();
+                System.out.println("Messaggio ricevuto dal client: " + clientMessage);
+                
+                if( clientMessage.equalsIgnoreCase("exit") ) {
+                    System.out.println("connessione interrotta dal client: ");
+                	break;
+                }
+                
+                
+                clientMessage = clientMessage.toUpperCase(  );
+
+                //System.out.println("Messaggio in upper case: " + clientMessage);
+                
+                
+                // Invia una risposta al client
+                String response = clientMessage;
+                writer.println(response);
+                System.out.println("Risposta inviata al client: " + response);
+            }
             
-            
-            // Invia una risposta al client
-            String response = clientMessage;
-            writer.println(response);
-            System.out.println("Risposta inviata al client: " + response);
+
             
             // Chiude la connessione
             clientSocket.close();
