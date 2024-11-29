@@ -5,8 +5,8 @@ import java.net.*;
 public class Client {
 
 	public static void main(String[] args) {
-		String serverAddress = "127.0.0.1"; // IP del server
-        int port = 12345; // Porta del server
+		String serverAddress = "10.130.1.113"; // IP del server
+        int port = 31114; // Porta del server
         
         try {
             // Crea un socket per connettersi al server
